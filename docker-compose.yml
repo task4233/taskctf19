@@ -1,0 +1,15 @@
+version: "3"
+services:
+  badfrontend:
+    build: ./docker/php
+    volumes:
+      - ./bad_frontend/:/var/www/html
+    ports:
+      - 3333:80
+
+  badfrontend2:
+    build: ./docker/php
+    volumes:
+      - ./bad_frontend2/:/var/www/html
+    ports:
+      - 3334:80
