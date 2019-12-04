@@ -69,7 +69,13 @@ if (isset($_POST['password'])) {
            $name = "superuser_admin";
            $password = "password12345678";
            if (hash_equals($name, $inputname) && hash_equals($password, $inputpass)) {
-           $res = '<p><div class="alert alert-success" role="alert"><h4>Tip</h4><p>JavaScriptでvalidationをしたとしても, burpでリクエストを編集したり, curlで直接リクエストを送ったりすることで回避できてしまいます。<br>Backend エンジニアさん, 頑張って！</p></div></p>';
+           $res = '<p><div class="alert alert-success" role="alert">
+           <h4>Tip</h4>
+           <p>JavaScriptでvalidationをしたとしても, burpでリクエストを編集したり, curlで直接リクエストを送ったりすることで回避できてしまいます。<br>
+           Backend エンジニアさん, 頑張って！<br>
+           ref: <a href="https://stackoverflow.com/questions/3483514/why-is-client-side-validation-not-enough">Why is client-side validation not enough?</a>
+           </p>
+           </div></p>';
              echo $res;
            }
          }

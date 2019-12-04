@@ -1,8 +1,10 @@
 <?php
 $inputname = "";
 $inputpass = "";
-if(isset($_POST['username']) && isset($_POST['password'])) {
+if(isset($_POST['username'])) {
   $inputname = $_POST['username'];
+}
+if (isset($_POST['password'])) { 
   $inputpass = $_POST['password'];
 }
 ?>
@@ -28,20 +30,22 @@ if(isset($_POST['username']) && isset($_POST['password'])) {
     
     <div class="jumbotron jumbotron-fluid">
       <div class="container">
-
-        <?php
-         if(!empty($_POST['username']) && !empty($_POST['password'])) {
+<?php
+         if(isset($_POST['username']) || isset($_POST['password'])) {
+         if(!empty($inputname) && !empty($inputpass)) {
            $name = "superuser_admin";
            $password = "password12345678";
-           if (hash_equals($name, $username) && hash_equals($password, $userpass)) {
+           if (hash_equals($name, $inputname) && hash_equals($password, $inputpass)) {
              $res = '<p><div class="alert alert-success" role="alert">flag: taskctf{maxlength_15_4_5t0pg4p_s0lut10n}</div></p>';
            } else {
              $res = '<p><div class="alert alert-danger" role="alert">invalid user</div></p>';
            }
            echo $res;
+         } else {
+           echo '<p><div class="alert alert-secondary" role="alert">has empty input</div></p>';
          }
-         ?>
-        
+        }
+         ?>        
         <h1 class="display-4">Let's login!</h1>
         <p class="lead">I've made the login form.</p>
         <form method="post" action="index.php">
@@ -60,11 +64,17 @@ if(isset($_POST['username']) && isset($_POST['password'])) {
         </form>
 
          <?php
-         if(!empty($_POST['username']) && !empty($_POST['password'])) {
+         if(!empty($inputname) && !empty($inputpass)) {
            $name = "superuser_admin";
            $password = "password12345678";
-           if (hash_equals($name, $username) && hash_equals($password, $userpass)) {
-           $res = '<div class="alert alert-success" role="alert"><h4>Tip</h4><p>maxLength is weak. I think validation in backend is good. ref: https://medium.com/ruffnote/maxlength%E3%81%AE%E4%BB%95%E6%A7%98%E3%81%AB%E8%A6%81%E6%B3%A8%E6%84%8F-5c7fc4581878</p></div>';
+           if (hash_equals($name, $inputname) && hash_equals($password, $inputpass)) {
+           $res = '<p><div class="alert alert-success" role="alert">
+           <h4>Tip</h4>
+           <p>maxlengthはdeveloper toolsで容易に書き換えられるので不十分です。<br>
+           注意しましょう。<br>
+           <a href="https://stackoverflow.com/questions/20965935/is-restriction-using-input-maxlength-sufficient-enough">Is restriction using input maxlength sufficient enough?</a>
+           </p>
+           </div></p>';
              echo $res;
            }
          }
