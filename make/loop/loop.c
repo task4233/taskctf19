@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 
-char l00p_f14g[32] = "gkctf{n1c3_r3wr171ng!!!}";
+char l00p_f14g[32] = "taskctf{XXXXXXXX}";
 
 void g_f1g(){
   printf("flag is %s\n", l00p_f14g);
