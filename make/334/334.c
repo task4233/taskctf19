@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-char s3cr37[32] = "taskctf{wh4t'5_334?}\0";
+char s3cr37[32] = "taskctf{XXXXXXXX}\0";
 int key = 0x12345678;
 
 void get_flag(){
