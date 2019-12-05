@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-char k3yw0rd[64] = "gkctf{ch3ck_7h3_l0c4710n_0f_v4r14bl3s!!}\0";
+char k3yw0rd[64] = "taskctf{XXXXXXXX}\0";
 
 int main(){
   char local[16];
