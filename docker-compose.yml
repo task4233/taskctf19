@@ -13,3 +13,51 @@ services:
       - ./bad_frontend2/:/var/www/html
     ports:
       - 3334:80
+  peep:
+    build: ./docker/pwn
+    volumes:
+      - ./peep/:/mnt/
+      - ./docker/pwn/vuln:/etc/xinetd.d/vuln
+      - ./docker/pwn/xinetd.conf:/etc/xinetd.conf
+    ports:
+      - 2222:3333
+  loop:
+    build: ./docker/pwn
+    volumes:
+      - ./loop/:/mnt/
+      - ./docker/pwn/vuln:/etc/xinetd.d/vuln
+      - ./docker/pwn/xinetd.conf:/etc/xinetd.conf
+    ports:
+      - 2223:3333
+  leetspeak:
+    build: ./docker/pwn
+    volumes:
+      - ./leetspeak/:/mnt/
+      - ./docker/pwn/vuln:/etc/xinetd.d/vuln
+      - ./docker/pwn/xinetd.conf:/etc/xinetd.conf
+    ports:
+      - 2224:3333
+  x-ray:
+    build: ./docker/pwn
+    volumes:
+      - ./x-ray/:/mnt/
+      - ./docker/pwn/vuln:/etc/xinetd.d/vuln
+      - ./docker/pwn/xinetd.conf:/etc/xinetd.conf
+    ports:
+      - 2225:3333
+  peep2:
+    build: ./docker/pwn
+    volumes:
+      - ./peep2/:/mnt/
+      - ./docker/pwn/vuln:/etc/xinetd.d/vuln
+      - ./docker/pwn/xinetd.conf:/etc/xinetd.conf
+    ports:
+      - 2226:3333
+  ttf:
+    build: ./docker/pwn
+    volumes:
+      - ./334/:/mnt/
+      - ./docker/pwn/vuln:/etc/xinetd.d/vuln
+      - ./docker/pwn/xinetd.conf:/etc/xinetd.conf
+    ports:
+      - 2227:3333

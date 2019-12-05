@@ -1,0 +1,12 @@
+service vuln
+{	
+    type    = UNLISTED
+    protocol  = tcp
+    socket_type = stream
+    only_from = 0.0.0.0/0
+    port    = 3333
+    wait    = no
+
+    server    = /mnt/vuln
+    user    = root
+}
