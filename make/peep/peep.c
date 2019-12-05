@@ -8,7 +8,10 @@ int main(){
 
   fgets(local,32,stdin);
   printf("key is 0x%x\n", key);
-  if (key == 0x1337)
+  puts("");
+  if (key == 0x1337) {
     printf("flag is %s\n", k3yw0rd);
+    puts("");
+  }
   return 0;
 }
