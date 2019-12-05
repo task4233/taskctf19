@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-char s3cr37[64] = "gkctf{1t's_f0rm@_str1ng_4tt4ck!!}\0";
+char s3cr37[64] = "taskctf{XXXXXXXX}\0";
 
 void get_flag(){
   printf("flag is %s\n", s3cr37);
