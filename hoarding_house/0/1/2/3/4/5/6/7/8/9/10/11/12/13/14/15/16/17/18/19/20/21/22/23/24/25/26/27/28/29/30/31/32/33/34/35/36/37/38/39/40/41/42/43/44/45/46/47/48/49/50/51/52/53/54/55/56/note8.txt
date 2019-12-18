@@ -1,1 +1,0 @@
-taskctf{f1nd_4nd_grep_15_g0d}

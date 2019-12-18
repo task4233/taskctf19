@@ -1,0 +1,7 @@
+flag: taskctf{F1n4lly_met!}
+
+ZIP, which is an archive file format that supports loss less data compression, has repeatable two file headers.
+You should notice this file format ZIP when you see binary.
+ZIP can unzip by hand. Let's try it!
+ref: Zipファイルを紙とペンで解凍してみた
+https://techblog.raccoon.ne.jp/archives/47967009.html

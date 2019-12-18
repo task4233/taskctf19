@@ -1,1 +1,5 @@
 *~
+*.txt
+*.nam
+*.id*
+peda*
