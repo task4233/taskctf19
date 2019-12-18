@@ -1,5 +1,7 @@
+.gdb*
 *~
 *.txt
 *.nam
 *.id*
+*.til
 peda*
