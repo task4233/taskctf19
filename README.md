@@ -3,6 +3,8 @@
 There are all problems and write-ups in taskctf.
 There is a directory for each problem.
 
+Twitter Hashtag: [#taskctf](https://twitter.com/search?q=%23taskctf&src=typed_query&f=live)
+
 # Dependency
  - php
    - bad_frontend
