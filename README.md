@@ -5,7 +5,7 @@ There is a directory for each problem.
 
 Twitter Hashtag: [#taskctf](https://twitter.com/search?q=%23taskctf&src=typed_query&f=live)
 
-# Dependency
+# Dependencies
  - php
    - bad_frontend
    - bad_frontend2
